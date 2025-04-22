@@ -131,3 +131,42 @@ This project is licensed under the Apache License 2.0 - see the
 For n8n questions: [n8n Forum](https://community.n8n.io/)
 
 For LibreChat questions: [LibreChat GitHub Discussions](https://github.com/danny-avila/LibreChat/discussions)
+## 📦 Deployment Methods Compared
+
+You can deploy this stack using one of the following methods, depending on your environment and workflow preferences:
+
+### 1. Docker Compose
+
+Use the provided `docker-compose.yml` file to quickly spin up all containers in a development environment.
+
+- **File**: `docker-compose.yml`
+- **Command**:
+  ```bash
+  docker compose up
+  ```
+
+### 2. Podman Compose
+
+If you prefer rootless containers or run Fedora, RHEL, or similar systems, use `podman-compose`.
+
+- **File**: `podman-compose.yml` (same format as Docker Compose)
+- **Command**:
+  ```bash
+  podman-compose up
+  ```
+
+### 3. Kubernetes via Helm Chart
+
+Use Helm for a production-grade deployment with templating and configuration support.
+
+- **Directory**: `helm-chart/`
+- **Steps**:
+  1. Install Helm: https://helm.sh/docs/intro/install/
+  2. Deploy the chart:
+     ```bash
+     helm install ai-stack ./helm-chart
+     ```
+
+This option provides the most flexibility and scalability for clustered or cloud-native deployments.
+
+> Note: All configuration files are provided in the project bundle and downloadable individually or as a ZIP archive.
