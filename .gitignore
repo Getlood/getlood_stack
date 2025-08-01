@@ -1,0 +1,73 @@
+.env
+volumes/supabase.env.example
+# Data directories
+n8n_data/
+librechat_data/
+ollama_data/
+qdrant_data/
+valkey_data/
+volumes/db/data/
+volumes/storage/*
+!volumes/storage/.gitkeep
+
+# Logs
+*.log
+logs/
+volumes/logs/*.log
+
+# Backups
+*.sql
+*.dump
+*.backup
+backup/
+backups/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Docker volumes (if you want to exclude all volume data)
+# volumes/db/data/
+
+# Keep the structure but not the data
+!.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Sensitive configuration backups
+*.env.backup
+*.env.old
